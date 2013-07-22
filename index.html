@@ -3,15 +3,41 @@
         <title>
             Infovis cardinal points
         </title>
+        <script src="components/jquery/jquery.min.js"></script>
         <style>
             body {
                 text-align: center;
             }
-            candidate {
+            h3 {
+                padding: 5%;
+            }
+            /* candidate for removal */
+            .candidate {
                 opacity: 0.9;
+            }
+            ul {
+                padding: 5%;
+            }
+            li {
+                list-style-type: none;
             }
         </style>
         <script>
+            // from d3's shuffle ^_^
+            var shuffle = function(array) {
+              var m = array.length, t, i;
+              while (m) {
+                i = Math.random() * m-- | 0;
+                t = array[m], array[m] = array[i], array[i] = t;
+              }
+              return array;
+            };
+            $(function(){
+                var $li = $('li').get();
+                $('ul')
+                    .empty()
+                    .append(shuffle($li));
+            });
         </script>
     </head>
     <body>
@@ -20,27 +46,27 @@
         </h3>
         <ul>
             <li>
-                <a href="">
+                <a href="http://d3js.org/">
                     d3
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="http://www.edwardtufte.com/tufte/books_vdqi">
                     The Visual Display of Quantitative Information
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="http://ieeevis.org/">
                     VisWeek
                 </a>
             </li>
             <li class="candidate">
-                <a href="">
+                <a href="http://www.visualcomplexity.com/vc/">
                     Visual Complexity
                 </a>
             </li>
             <li class="candidate">
-                <a href="">
+                <a href="http://www.dashingd3js.com/why-data-visualizations">
                     Anscombe's Quartet
                 </a>
             </li>
