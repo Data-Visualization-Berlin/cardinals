@@ -26,3 +26,9 @@ layout, and thus a position for each element, that gets a different importance
 according to the reader's culture?
 
 Well, it's randomly shuffled at each page load.
+
+#### Candidates
+
+In order to have a new point, an old one should be deleted. The candidates for
+removed are marked with the `candidate` class, which just changes the colour
+now
